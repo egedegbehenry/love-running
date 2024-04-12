@@ -7,6 +7,15 @@
     box-sizing: border-box;
 }
 
+/* General style */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* General project styles */
+    color: #3a3a3a;
+}
+
 /* Header */
 header {
     background-color: lightcoral;
@@ -15,6 +24,8 @@ header {
 /* Main content */
 main {
     background-color: lightblue;
+    /* Make main element take up any sulplus space to push footer down */
+    flex: 1 0 auto;
 }
 
 /* Footer */
