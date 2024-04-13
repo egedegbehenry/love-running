@@ -13,9 +13,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-     /* Generic project styles */
-     color: #3a3a3a;
-     font-family: 'Lato' sans-serif;
+    
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: 'Lato' sans-serif;
 }
 
 h1 {
@@ -41,10 +42,16 @@ h1 {
 nav {
     position: absolute;
     background-color: #ffffff;
-   width: 100%;
-   padding: 0;
-   box-shadow: 0 2px 2px #3a3a3a;
-   display: none;
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+}
+
+/* Nav toggle */
+
+#nav-toggle:checked-nav {
+    display: block;
 }
 
 /* Header */
@@ -55,6 +62,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
