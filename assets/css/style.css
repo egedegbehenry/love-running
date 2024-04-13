@@ -16,9 +16,25 @@ body {
     
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Lato' sans-serif;
+    font-family: 'Lato', sans-serif;
+}
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
 h1 {
     font-family: 'Oswald' sans-serif;
     text-transform: uppercase;
@@ -38,40 +54,22 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar style with dropdown toggle */
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    padding: 0;
+    left: 0;
+    padding: 0 1rem; 
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top: 100%;
 }
 
 /* Nav toggle */
-
-#nav-toggle:checked-nav {
+#nav-toggle:checked~nav {
     display: block;
 }
-
-/* Header */
-header {
-    background-color: #ffffff;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* Main content */
 main {
     background-color: lightblue;
