@@ -220,8 +220,7 @@ main {
     #benefits-physical,
     #benefits-mental {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+       
     }
 
     #benefits-physical>div,
