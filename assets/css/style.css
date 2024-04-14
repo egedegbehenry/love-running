@@ -13,11 +13,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -35,17 +42,13 @@ header a {
     text-decoration: none;
     color: inherit;
 }
-h1 {
-    font-family: 'Oswald' sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
+
 #menu > li {
     margin-bottom: 1em;
 }
@@ -60,7 +63,7 @@ nav {
     background-color: #ffffff;
     width: 100%;
     left: 0;
-    padding: 0 1rem; 
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
@@ -70,9 +73,11 @@ nav {
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
+
 .nav-toggle-label {
     font-size: 2rem;
 }
@@ -83,11 +88,29 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
+
 /* Hero section */
 #hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
 }
 
 /* Footer */
@@ -104,6 +127,7 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     /* Header */
@@ -138,6 +162,12 @@ main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
+
+    /* Hero image */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -146,4 +176,3 @@ main {
         border-bottom: 1px solid #3a3a3a;
     }
 }
-    
