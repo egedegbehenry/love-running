@@ -368,8 +368,7 @@ main {
     #photos {
         column-count: 3;
     }
-}
-/* Form */
+    /* Form */
 #signup {
     background-position: center;
     position: relative;
@@ -392,6 +391,8 @@ main {
     color: #454b1b;
 
 }
+}
+
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
