@@ -18,12 +18,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
+
 .hidden-heading {
     display: none;
 }
@@ -87,9 +90,13 @@ nav {
 
 /* Main content */
 main {
-    /* Make main element take up any surplus space to push footer down */
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
@@ -128,6 +135,7 @@ main {
     text-align: center;
     font-size: 280%;
 }
+
 
 #benefits-physical>div,
 #benefits-mental>div {
@@ -178,7 +186,7 @@ main {
     Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
@@ -195,6 +203,32 @@ main {
 
 #photos {
     line-height: 0;
+}
+
+/* Form */
+
+#signup {
+
+    background-image: url("../images/signup-image.webp");
+
+    background-size: cover;
+
+    background-position: 75%;
+
+    padding: 20px 10% 0 10%;
+
+    flex-grow: 1;
+
+}
+
+#signup-form {
+
+    color: #ffffff;
+
+    background-color: rgba(60, 60, 60, 0.6);
+
+    padding: 30px;
+
 }
 
 /* Footer */
@@ -298,14 +332,15 @@ main {
     }
 }
 
-@media screen and (min-width: 1200px) {    
+@media screen and (min-width: 1200px) {
+
     /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
 
-    #benefits > div {
+    #benefits>div {
         flex: 1;
     }
 
@@ -317,11 +352,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
